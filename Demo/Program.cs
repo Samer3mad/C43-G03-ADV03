@@ -55,13 +55,6 @@
             public static bool IsDivisible(int Number) => Number % 7 == 0;
         }
 
-        class SomeFunc
-        {
-            public static bool Test(int num) { return num > 0; }
-            public static string Cast(int num) { return num.ToString(); }
-            public static void Print(string Name) { Console.WriteLine($"Hello {Name}"); }
-        }
-
         static void Main(string[] args)
         {
             #region What is Delegate
@@ -150,16 +143,49 @@
             #endregion
 
             #region Built-in Delegates [Predicate, Func, Action]
-           //Predicate<int> pre = SomeFunc.Test;
-           //pre(10);
-           //
-           //
-           //Func<int, string> func = SomeFunc.Cast;
-           //func.Invoke(10);
-           //
-           //
-           //Action<string> action = SomeFunc.Print;
-           //action.Invoke("Samer");
+            //Predicate<int> pre = SomeFunc.Test;
+            //pre(10);
+            //
+            //
+            //Func<int, string> func = SomeFunc.Cast;
+            //func.Invoke(10);
+            //
+            //
+            //Action<string> action = SomeFunc.Print;
+            //action.Invoke("Samer");
+            #endregion
+
+            #region Anonymous Method and Lambada Expression
+            #region Anonymous Method
+            //Predicate<int> pre = delegate (int num) { return num > 0; };
+            //pre.Invoke(10);
+            //pre(10);
+            //
+            //
+            //Func<int, string> func = delegate (int num) { return num.ToString(); };
+            //func.Invoke(10);
+            //func(10);
+            //
+            //
+            //Action<string> action = delegate (string Name) { Console.WriteLine($"Hello {Name}"); }
+            //action.Invoke("Samer"); 
+            #endregion
+
+            #region Lambada Expression
+            // '=>' Called as "FatArrow" and Read as "GoesTo"
+            //Predicate<int> pre = num => num > 0;
+            //pre.Invoke(10);
+            //pre(10);
+            //
+            //
+            //Func<int, string> func = num => num.ToString();
+            //func.Invoke(10);
+            //func(10);
+            //
+            //
+            //Action<string> action = Name => Console.WriteLine($"Hello {Name}");
+            //action.Invoke("Samer"); 
+            #endregion
             #endregion
 
         }
