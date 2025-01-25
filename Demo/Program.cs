@@ -56,6 +56,16 @@
             ///int Res = reference("SaMer EMAd");
             ///Console.WriteLine($"Result = {Res}");
             #endregion
+
+            #region Delegate Example 02
+            //int[] numbers = { 8, 2, 9, 5, 10, 7, 3, 6, 1, 4 };
+            //CustomFun<int> func = SortingTypes.CompareGrt;
+            //func = default;
+            //SortingAlgo.BubbleSort(numbers, delegate (int x, int y) { return x > y; });
+            //SortingAlgo.BubbleSort(numbers, (x, y) => x > y);
+            //foreach (int num in numbers) 
+            //    Console.WriteLine(num);
+            #endregion
         }
     }
 }
