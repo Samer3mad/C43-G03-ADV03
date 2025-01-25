@@ -30,6 +30,30 @@
     }
         ///Step 0. Declaring Delegate Function
         public delegate int CustomFunc(string arg01);
+        public delegate bool CustomPre(int arg01);
+        public static List<int>FindNumbers(List<int> nums, CustomPre pre)
+        {
+            List<int> result = new List<int>();
+
+            if (nums?.Count > 0) 
+            {
+                foreach (int num in nums)
+                {
+                    //if(num % 2 != 0)
+                    if (pre(num))
+                        result.Add(num);
+                }
+            }
+            return result;
+        }
+
+        class ConditionFunc
+        {
+            public static bool IsOdd(int Number) => Number % 2 != 0;
+            public static bool IsEven(int Number) => Number % 2 == 0;
+
+            public static bool IsDivisible(int Number) => Number % 7 == 0;
+        }
 
         static void Main(string[] args)
         {
@@ -85,6 +109,37 @@
             //{
             //    Console.WriteLine(Name);
             //}
+            #endregion
+
+            #region Delegate Example 03
+
+            #region Find Odds
+            //List<int> numbers = Enumerable.Range(0, 100).ToList();
+            //List<int> Odds = FindNumbers(numbers, ConditionFunc.IsOdd);
+            //foreach (int num in Odds)
+            //{
+            //    Console.WriteLine(num);
+            //}
+            #endregion
+
+            #region Find Evens
+            //List<int> numbers = Enumerable.Range(0, 100).ToList();
+            //List<int> Odds = FindNumbers(numbers, ConditionFunc.IsEven);
+            //foreach (int num in Odds)
+            //{
+            //    Console.WriteLine(num);
+            //} 
+            #endregion
+
+            #region Divisible by SEVEN
+            //List<int> numbers = Enumerable.Range(0, 100).ToList();
+            //List<int> Odds = FindNumbers(numbers, ConditionFunc.IsDivisible);
+            //foreach (int num in Odds)
+            //{
+            //    Console.WriteLine(num);
+            //} 
+            #endregion
+
             #endregion
 
         }
