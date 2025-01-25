@@ -188,6 +188,27 @@
             #endregion
             #endregion
 
+            #region New Feature at Delegate in C# 10.0
+            // var keyword used for implicitly typed local variable [C# 2.0]
+            //var Name = "Samer";
+            //var x; //Invalid
+            //Name = 22; //Invalid
+
+            //var in C# 10.0
+            //var pre = (int num) => num > 0;
+            //pre.Invoke(10);
+            //pre(10);
+            //
+            //
+            //var func = (int num) => num.ToString();
+            //func.Invoke(10);
+            //func(10);
+            //
+            //
+            //var action = (string Name) => Console.WriteLine($"Hello {Name}");
+            //action.Invoke("Samer");
+            #endregion
+
         }
     }
 }
