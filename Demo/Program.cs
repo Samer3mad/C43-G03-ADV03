@@ -55,6 +55,12 @@
             public static bool IsDivisible(int Number) => Number % 7 == 0;
         }
 
+        public static Action DelegateDoAction()
+        {
+            return delegate { Console.WriteLine("Hello Samer"); };
+            return () => Console.WriteLine("Hello Samer");
+        }
+
         static void Main(string[] args)
         {
             #region What is Delegate
@@ -231,6 +237,9 @@
             //}
             #endregion
 
+            #region Function Returns Function - FP Feature
+            //DelegateDoAction()();
+            #endregion
         }
     }
 }
