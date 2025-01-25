@@ -66,6 +66,27 @@
             //foreach (int num in numbers) 
             //    Console.WriteLine(num);
             #endregion
+
+            #region Delegate Example 02 Using Generics
+            //int[] numbers = { 8, 2, 9, 5, 10, 7, 3, 6, 1, 4 };
+            //CustomFun<int, int, bool> func = SortingTypes.CompareGrt;
+            //func = default;
+            //SortingAlgo.BubbleSort(numbers, delegate (int x, int y) { return x > y; });
+            //SortingAlgo<int>.BubbleSort(numbers, func);
+            //foreach (int num in numbers)
+            //    Console.WriteLine(num);
+
+
+            //string[] Names = { "Omar", "Nada", "Ziad", "Amir", "Mona", "Yaml", "Samer", "Emad" };
+            //CustomFun<string, string, bool> func = SortingTypes.CompareGrt;
+            //SortingAlgo<string>.BubbleSort(Names, func);
+
+            //foreach (string Name in Names)
+            //{
+            //    Console.WriteLine(Name);
+            //}
+            #endregion
+
         }
     }
 }
