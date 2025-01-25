@@ -209,6 +209,28 @@
             //action.Invoke("Samer");
             #endregion
 
+            #region List Methods Taht Takes Function as a Parameter
+            List<int> nums = new List<int> { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
+            //List<int> OddNums = FindNumbers(nums, ConditionFunc.IsOdd);
+            //List<int> OddNums = FindNumbers(nums, delegate (int Number) { return Number % 2 != 0; });
+            //List<int> OddNums = FindNumbers(nums, (Number) => Number % 2 != 0);
+            //List<int> OddNums = nums.FindAll(N => N % 2 != 0);
+            //nums.Find(N => N % 2 != 0);
+            //nums.FindLast(N => N % 2 != 0);
+            //nums.Exists(x => x > 0);
+            //nums.TrueForAll(x => x > 0);
+            //nums.ForEach(Samer =>
+            //{
+            //    Samer += 10;
+            //});
+            //nums.Remove(10);
+            //nums.RemoveAll(x => x % 2 ==0);
+            //foreach (int num in OddNums)
+            //{
+            //    Console.WriteLine(num);
+            //}
+            #endregion
+
         }
     }
 }
