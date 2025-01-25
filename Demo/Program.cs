@@ -2,40 +2,40 @@
 {
     internal class Program
     {
-    class StringFun
-    {
-        public static int GetCountOfUpperCaseChars(string Name)
+        class StringFun
         {
-            int count = 0;
-            if (Name is not null)
+            public static int GetCountOfUpperCaseChars(string Name)
             {
-                for (int i = 0; i < Name.Length; i++)
-                    if (char.IsUpper(Name[i]))
-                        count++;
+                int count = 0;
+                if (Name is not null)
+                {
+                    for (int i = 0; i < Name.Length; i++)
+                        if (char.IsUpper(Name[i]))
+                            count++;
+                }
+                return count;
             }
-            return count;
-        }
 
-        public static int GetCountOfLowerCaseChars(string Name)
-        {
-            int count = 0;
-            if (Name is not null)
+            public static int GetCountOfLowerCaseChars(string Name)
             {
-                for (int i = 0; i < Name.Length; i++)
-                    if (char.IsLower(Name[i]))
-                        count++;
+                int count = 0;
+                if (Name is not null)
+                {
+                    for (int i = 0; i < Name.Length; i++)
+                        if (char.IsLower(Name[i]))
+                            count++;
+                }
+                return count;
             }
-            return count;
         }
-    }
         ///Step 0. Declaring Delegate Function
         public delegate int CustomFunc(string arg01);
         public delegate bool CustomPre(int arg01);
-        public static List<int>FindNumbers(List<int> nums, CustomPre pre)
+        public static List<int> FindNumbers(List<int> nums, CustomPre pre)
         {
             List<int> result = new List<int>();
 
-            if (nums?.Count > 0) 
+            if (nums?.Count > 0)
             {
                 foreach (int num in nums)
                 {
@@ -53,6 +53,13 @@
             public static bool IsEven(int Number) => Number % 2 == 0;
 
             public static bool IsDivisible(int Number) => Number % 7 == 0;
+        }
+
+        class SomeFunc
+        {
+            public static bool Test(int num) { return num > 0; }
+            public static string Cast(int num) { return num.ToString(); }
+            public static void Print(string Name) { Console.WriteLine($"Hello {Name}"); }
         }
 
         static void Main(string[] args)
@@ -140,6 +147,19 @@
             //} 
             #endregion
 
+            #endregion
+
+            #region Built-in Delegates [Predicate, Func, Action]
+           //Predicate<int> pre = SomeFunc.Test;
+           //pre(10);
+           //
+           //
+           //Func<int, string> func = SomeFunc.Cast;
+           //func.Invoke(10);
+           //
+           //
+           //Action<string> action = SomeFunc.Print;
+           //action.Invoke("Samer");
             #endregion
 
         }
